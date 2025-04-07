@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Game & Tech Insider</title>
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fffaf0; /* cream */
+      color: #111;
+    }
+
+    /* Header */
+    header {
+      background-color: #000; /* black */
+      color: white;
+      padding: 20px;
+    }
+
+    header h1 {
+      margin-bottom: 10px;
+      font-size: 28px;
+      text-align: center;
+      color: #ff0000; /* red */
+    }
+
+    /* Navigation */
+    nav {
+      display: flex;
+      justify-content: center;
+    }
+
+    .main-menu {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+    }
+
+    .main-menu > li {
+      position: relative;
+    }
+
+    .main-menu > li > a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 10px 15px;
+      display: block;
+    }
+
+    .main-menu > li:hover > a {
+      background-color: #ff0000; /* red highlight */
+      border-radius: 5px;
+    }
+
+    .dropdown {
+      display: none;
+      position: absolute;
+      background-color: #111;
+      padding: 10px 0;
+      list-style: none;
+      top: 100%;
+      left: 0;
+      min-width: 160px;
+      z-index: 1000;
+      border-radius: 0 0 5px 5px;
+    }
+
+    .dropdown li a {
+      display: block;
+      padding: 10px 15px;
+      color: white;
+      text-decoration: none;
+    }
+
+    .dropdown li a:hover {
+      background-color: #ff0000; /* red on hover */
+    }
+
+    .main-menu > li:hover .dropdown {
+      display: block;
+    }
+
+    /* Main Content */
+    main {
+      padding: 20px;
+    }
+
+    .feature-section {
+      display: flex;
+      gap: 20px;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .feature {
+      flex: 1;
+      min-width: 250px;
+      background-color: white;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease;
+    }
+
+    .feature:hover {
+      transform: scale(1.02);
+    }
+
+    .feature h3 {
+      color: #c10000; /* deeper red */
+      margin-bottom: 10px;
+    }
+
+    .feature img {
+      width: 100%;
+      height: auto;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #000; /* black */
+      color: white;
+      text-align: center;
+      padding: 25px 20px;
+    }
+
+    footer h2 {
+      color: #ff0000; /* red */
+      margin-bottom: 10px;
+    }
+
+    footer p {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* Responsive Navigation */
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .main-menu {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .main-menu > li {
+        width: 100%;
+        text-align: center;
+      }
+
+      .dropdown {
+        position: static;
+        display: none;
+        width: 100%;
+      }
+
+      .main-menu > li.active .dropdown {
+        display: block;
+      }
+
+      .feature-section {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Game & Tech Insider</h1>
+    <nav>
+      <ul class="main-menu">
+        <li>
+          <a href="games.html">Gaming</a>
+          <ul class="dropdown">
+            <li><a href="">PC Games</a></li>
+            <li><a href="#">Mobile Games</a></li>
+            <li><a href="#">eSports</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="consoles.html">Consoles</a>
+          <ul class="dropdown">
+            <li><a href="#">PlayStation</a></li>
+            <li><a href="#">Xbox</a></li>
+            <li><a href="#">Nintendo</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="tech.html">Tech Gadgets</a>
+          <ul class="dropdown">
+            <li><a href="#">Smartphones</a></li>
+            <li><a href="#">Wearables</a></li>
+            <li><a href="#">Accessories</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">Upcoming Releases</a>
+          <ul class="dropdown">
+            <li><a href="#">Games</a></li>
+            <li><a href="#">Consoles</a></li>
+            <li><a href="#">Gadgets</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="content">
+    <section class="feature-section">
+      <!-- FEATURE 1 -->
+      <div class="feature">
+        <h3>Console Wars</h3>
+        <img src="https://placehold.co/300x200" alt="Gaming Console">
+        <p>Discover the latest showdowns between PlayStation, Xbox, and Nintendo.</p>
+      </div>
+
+      <!-- FEATURE 2 -->
+      <div class="feature">
+        <h3>Tech on the Rise</h3>
+        <img src="https://placehold.co/300x200" alt="Tech Gadget">
+        <p>Explore the hottest tech gadgets revolutionizing daily life.</p>
+      </div>
+
+      <!-- FEATURE 3 -->
+      <div class="feature">
+        <h3>Release Radar</h3>
+        <img src="https://placehold.co/300x200" alt="Upcoming Releases">
+        <p>Stay ahead with sneak peeks at the most anticipated launches.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <section class="about-us">
+      <h2>About Us</h2>
+      <p>
+        Game & Tech Insider delivers cutting-edge news, honest reviews, and fresh updates on gaming consoles,
+        tech gadgets, and release calendars. We're here to keep gamers and tech lovers in the loop.
+      </p>
+    </section>
+  </footer>
+</body>
+</html>
